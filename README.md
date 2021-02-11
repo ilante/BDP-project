@@ -7,7 +7,7 @@
 
 2. Scientific application chosen: [libsvm](https://www.csie.ntu.edu.tw/~cjlin/libsvm/) svm-train
   * Idea: training 2 SVM models for protein secondary structure (SS) prediction using Radial Basis Funciton (RBF) kernel
-    * Motivation: grid-searches are useful for finding the right hyperparameters *C* (Cost) and $\gamma$
+    * Motivation: grid-searches are useful for finding the right hyperparameters *C* (Cost) and \gamma
     * For the scope of the project only 2 models will be trained
        * Can be scaled up easily for a larger grid-search to find best hyperparameters
        
