@@ -11,15 +11,17 @@
      * For the scope of the project only 2 models will be trained
         * Can be scaled up easily for a larger grid-search to find best hyperparameters
 
-  * Create test jobs
-  * Input and output must be handled by **Sandbox** or **Shared Volume**
-  * Discuss model for data management that was chosen for the application
-  * Justify choices
-  * Describe SVM and the structure of the jobs
-  * Run the test jobs
+    * Create test jobs
+    * Input and output must be handled by **Sandbox** or **Shared Volume**
+    * Discuss model for data management that was chosen for the application
+    * Justify choices
+    * Describe SVM and the structure of the jobs
+    * Run the test jobs
+    
 3. Create container image that can be used to run:
-  * Application
-  * Test jobs
+    * Application
+    * Test jobs
+    
 4. Evaluate the **time needed** to address several runs
-  * Discuss dimension needed
-  * Estimate costs
+    * Discuss dimension needed
+    * Estimate costs
