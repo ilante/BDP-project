@@ -1,0 +1,42 @@
+####################################################
+################### svm-train ######################
+####################################################
+
+########### The program to be executed #######
+
+Executable = libsvm_train_exec.sh
+
+############ Input Sandbox  #########################
+# find the single input file HERE (ABSOLUTE path unless youre running it from current directory)
+Input      = /data2/in_train_tiny/train$(Process).svm
+# Can contain standard input
+
+# IF you have more than 1 input file: find all input files HERE (ABSOLUTE path)
+transfer_input_files = train$(Process).svm , kdkdkd.txt ththten.txt
+
+# HTCondor takes all previously listed files and transfers them into tep scratch dir!
+# HTC knows where the dir is --> thus args are passed via filename
+
+Arguments = "train$(Process).svm, train$(Process).model"
+
+###### Output Sandbox ###############################
+
+Log        = train$(Process).log
+# will contain condor log
+
+Output     = train$(Process).out
+# will contain the standard output
+
+Error      = train$(Process).error
+# will contain the standard error
+
+############## condor control variables #############
+
+# should_transfer_files = YES
+# when_to_transfer_output = ON_EXIT
+
+Universe = vanilla
+
+#####################################################
+
+Queue 2

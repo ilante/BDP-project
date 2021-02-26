@@ -1,0 +1,38 @@
+####################################################
+################### svm-train ######################
+####################################################
+
+########### The program to be executed #######
+
+Executable = libsvm_train_exec.sh
+
+############ Input Sandbox  #########################
+
+Input      = /data2/in_train_tiny/train$(Process).svm
+# Can contain standard input
+
+# transfer_input_files = 
+
+Arguments = "/data2/in_train_tiny/train$(Process).svm
+
+###### Output Sandbox ###############################
+
+Log        = read_$INT(readnum).log
+# will contain condor log
+
+Output     = read_$INT(readnum).out
+# will contain the standard output
+
+Error      = read_$INT(readnum).error
+# will contain the standard error
+
+############## condor control variables #############
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+Universe = vanilla
+
+#####################################################
+
+Queue 10
